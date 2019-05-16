@@ -1,0 +1,49 @@
+<h1 class="text-center">{{title}}</h1>
+
+
+<div class="new-user-button">
+  <button class="btn" autofocus (click)="getRandomUser()">
+        <i class="fa fa-user"></i>{{buttonText}}</button>
+</div>
+<div>
+
+  <div [hidden]="!loading">
+    <i class="fa fa-refresh fa-2x fa-spin"></i>
+  </div>
+
+  <div class="col-md-4" *ngIf="user" [hidden]="loading">
+</div>
+<div >
+    <div class="col" >
+    
+    <table class="table table-responsive">
+
+        <thead class="thead">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Institución</th>
+            <th scope="col">Vereda</th>
+            <th scope="col">Dirección</th>
+            
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let k of datos; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{datos[i][8]}}</td>
+            <td>{{datos[i][9]}}</td>
+            <td>{{datos[i][10]}}</td>
+            <td>{{datos[i][11]}}</td>
+            
+            
+          </tr>
+        </tbody>
+
+      </table>
+</div>
+    
+</div>
+  
+</div>
