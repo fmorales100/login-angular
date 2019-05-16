@@ -11,9 +11,9 @@ import { UserComponent } from './user/user.component';
 const routes: Routes = [
   { path: '', component: HomeComponent,  canActivate: [AuthGuard] }, 
   { path: 'login', component: LoginComponent },
-  { path: 'test',component: TestComponent},
-  { path: 'datos',component: DatosComponent},
-  { path: 'user',component: UserComponent},
+  { path: 'test', component: TestComponent },
+  { path: 'datos', component: DatosComponent },
+  { path: 'user', component: UserComponent },
   { path: '**', redirectTo: ''}
 ];
 
